@@ -64,6 +64,10 @@ sup {
   margin-top: 15px;
 }
 
+.notification-bell {
+  fill: #a6a6d6;
+}
+
 .user-notification {
   margin: 15px 0;
   display: flex;
@@ -119,6 +123,23 @@ main {
     grid-template-columns: 155px repeat(3, 1fr);
     grid-auto-rows: 120px 1fr;
     grid-template-areas: "header header header header" "nav main main main" "nav main main main" "nav main main main" "nav main main main";
+  }
+
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  .nav-icons {
+    margin-bottom: 60px;
   }
 }
 

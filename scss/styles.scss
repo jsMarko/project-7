@@ -72,6 +72,10 @@ sup {
    margin-top: 15px;
 }
 
+.notification-bell {
+   fill: lighten($color-header-bgc, 20%);
+}
+
 .user-notification {
    margin: 15px 0;
    display: flex;
@@ -114,8 +118,6 @@ sup {
 .nav-icons {
    width: 3.5rem;
    height: 3.5rem;
-   //  color: lighten($color-nav-bgc, 20%);
-   // ! FIX ICON FILL COLOR
 }
 
 /* ---------------> NAV CONTENT ENDS <---- */
@@ -140,5 +142,22 @@ main {
          "nav main main main"
          "nav main main main"
          "nav main main main";
+   }
+
+   .main-header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 30px;
+   }
+
+   .nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 60px;
+   }
+
+   .nav-icons {
+      margin-bottom: 60px;
    }
 }
