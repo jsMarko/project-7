@@ -7,6 +7,10 @@
          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
          rel="stylesheet"
       />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
       <title>WebApp DashBoard</title>
       <link rel="stylesheet" href="css/styles.css" />
    </head>
@@ -48,9 +52,26 @@
             </a>
          </nav>
          <main class="main-content">
-            <!-- ! Main content here  -->
+            <!-- MAIN CONTENT HEADER -->
+            <header class="main-content-header">
+               <div class="dash-title-container">
+                  <h2 class="dash-title">Dashboard</h2>
+               </div>
+               <div class="header-search-container">
+                  <input
+                     type="text"
+                     class="input-field"
+                     placeholder="Search"
+                  /><i class="fas fa-search icon"></i>
+               </div>
+            </header>
          </main>
       </div>
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+         integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="
+         crossorigin="anonymous"
+      ></script>
       <script src="js/app.js"></script>
    </body>
 </html>
