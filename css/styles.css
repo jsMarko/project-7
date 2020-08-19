@@ -108,26 +108,34 @@ sup {
 }
 
 /* ---------------> NAV CONTENT ENDS <---- */
+/* --------------------------------------------------
+                    MAIN CONTENT
+--------------------------------------------------- */
 main {
   grid-area: main;
 }
 
 .main-content-header {
-  padding: 10px 0;
+  height: 130px;
+  padding-top: 15px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  border: 2px solid red;
 }
 
 .dash-title {
   margin-right: 40px;
   margin-left: 25px;
+  color: #6061b6;
 }
 
 .header-search-container {
   width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .header-search-container i {
@@ -136,7 +144,7 @@ main {
 
 .icon {
   padding: 10px;
-  color: red;
+  color: #8384c6;
   width: 40px;
   height: 40px;
 }
@@ -146,11 +154,47 @@ main {
 }
 
 .input-field {
-  width: 40%;
+  width: 100%;
+  height: 45px;
   padding: 10px;
 }
 
-/* font-family: 'Open Sans', sans-serif; */
+/* ================ ALERT BAR ============= */
+.alert-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-bar {
+  width: 90%;
+  background-color: #6061b6;
+  color: white;
+  padding-left: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.span-alert {
+  margin-right: 10px;
+  color: white;
+}
+
+.alert-message {
+  color: #dadbee;
+}
+
+.close-alert {
+  cursor: pointer;
+  padding: 12px;
+}
+
+/* ---------------> MAIN CONTENT ENDS <---- */
 /* --------------------------------------------------
                MEDIA QUERIES
   -------------------------------------------------- */
@@ -176,6 +220,28 @@ main {
 
   .nav-icons {
     margin-bottom: 60px;
+  }
+
+  .main-content-header {
+    padding-top: 0;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .header-search-container {
+    padding-right: 25px;
+  }
+
+  .input-field {
+    width: 400px;
+    height: 45px;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .input-field {
+    width: 500px;
   }
 }
 
