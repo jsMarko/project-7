@@ -1,3 +1,6 @@
+$color-header-bgc: #6061b6;
+$color-nav-bgc: #3b3861;
+
 * {
    margin: 0;
    padding: 0;
@@ -28,22 +31,25 @@ body {
    max-width: 1450px;
 }
 
+/* --------------------------------------------------
+HEADER CONTENT - LOGO NAME, BELL, USER PROIFILE IMG
+--------------------------------------------------- */
 .main-header {
    grid-area: header;
-   background-color: #6061b6;
+   background-color: $color-header-bgc;
    width: 100%;
-}
 
-/* --------------------------------------------------
-               LOGO NAME
-  -------------------------------------------------- */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
 .logo {
    font-size: 2.5rem;
    /*  font for logo - App of "YourApp" logo  */
    font-family: "Open Sans", sans-serif;
    font-weight: 100;
-   color: white;
+   color: lighten($color-header-bgc, 25%);
 }
 
 .logo-name-your {
@@ -56,12 +62,61 @@ sup {
    margin-left: 5px;
 }
 
-/* ---------------> LOGO NAME ENDS <---- */
+.notification-bell {
+   width: 1.8rem;
+   height: 1.8rem;
+}
+
+.logo,
+.notification-bell {
+   margin-top: 15px;
+}
+
+.user-notification {
+   margin: 15px 0;
+   display: flex;
+}
+
+.profile {
+   margin-left: 10px;
+   display: flex;
+   align-items: center;
+   padding: 5px;
+}
+
+.profile-img {
+   border-radius: 50%;
+   width: 3.5rem;
+   height: 3.5rem;
+}
+
+.user-name {
+   margin-left: 10px;
+   color: lighten($color-header-bgc, 25%);
+   font-size: 1.3rem;
+}
+
+/* ---------------> HEADER CONTENT ENDS <---- */
+
+/* --------------------------------------------------
+                    NAVIGATION
+--------------------------------------------------- */
 
 .nav {
    grid-area: nav;
-   background-color: #3b3861;
+   background-color: $color-nav-bgc;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
 }
+
+.nav-icons {
+   width: 3.5rem;
+   height: 3.5rem;
+   color: lighten($color-nav-bgc, 20%);
+}
+
+/* ---------------> NAV CONTENT ENDS <---- */
 
 main {
    grid-area: main;
