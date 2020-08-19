@@ -93,6 +93,7 @@ sup {
 .user-name {
    margin-left: 10px;
    color: lighten($color-header-bgc, 25%);
+
    font-size: 1.3rem;
 }
 
@@ -113,7 +114,8 @@ sup {
 .nav-icons {
    width: 3.5rem;
    height: 3.5rem;
-   color: lighten($color-nav-bgc, 20%);
+   //  color: lighten($color-nav-bgc, 20%);
+   // ! FIX ICON FILL COLOR
 }
 
 /* ---------------> NAV CONTENT ENDS <---- */
