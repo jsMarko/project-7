@@ -46,6 +46,7 @@ let trafficLine = new Chart("chartjs-traffic", {
       ]
    },
    options: {
+      responsive: true,
       maintainAspectRatio: false,
       legend: {
          display: false
