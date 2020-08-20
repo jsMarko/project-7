@@ -25,7 +25,6 @@ let trafficLine = new Chart("chartjs-traffic", {
       ],
       datasets: [
          {
-            label: "", // ! Cant get rid of this... WHY?
             data: [
                500,
                850,
@@ -38,11 +37,18 @@ let trafficLine = new Chart("chartjs-traffic", {
                1300,
                1400,
                2100
-            ]
+            ],
+            borderWidth: 1,
+            borderColor: "#888",
+            hoverBorderWidth: 3,
+            hoverBorderColor: "#000"
          }
       ]
    },
    options: {
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+      legend: {
+         display: false
+      }
    }
 });

@@ -201,25 +201,29 @@ main {
                    TRAFFIC LINE CHART
   -------------------------------------------------- */
 .traffic-section {
+  display: flex;
+  justify-content: center;
   border: 2px solid red;
 }
 
 .header-traffic {
-  height: 90px;
+  width: 100%;
+  padding: 10px 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   border: 2px solid red;
 }
 
 .title-traffic {
-  margin-left: 26px;
   font-size: 1.3rem;
 }
 
 .menu-traffic {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .title-traffic,
@@ -228,7 +232,6 @@ main {
 }
 
 .li-traffic {
-  margin-right: 35px;
   font-size: 1.6rem;
   padding: 6px 15px;
   border-radius: 25px;
@@ -241,7 +244,7 @@ main {
 
 .traffic-chart-container {
   width: 100%;
-  height: 300px;
+  height: 100%;
   border: 2px solid red;
 }
 
@@ -291,6 +294,20 @@ main {
 
   .alert-bar {
     width: 96%;
+  }
+
+  .header-traffic {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title-traffic {
+    margin-left: 10px;
+  }
+
+  .menu-traffic {
+    flex-wrap: nowrap;
   }
 }
 @media screen and (min-width: 1024px) {
