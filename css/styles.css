@@ -126,6 +126,7 @@ main {
 .dash-title {
   margin-right: 40px;
   margin-left: 25px;
+  font-size: 2rem;
   color: #6061b6;
 }
 
@@ -197,7 +198,55 @@ main {
 
 /* ---------------> MAIN CONTENT ENDS <---- */
 /* --------------------------------------------------
-               MEDIA QUERIES
+                   TRAFFIC LINE CHART
+  -------------------------------------------------- */
+.traffic-section {
+  border: 2px solid red;
+}
+
+.header-traffic {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid red;
+}
+
+.title-traffic {
+  margin-left: 26px;
+  font-size: 1.3rem;
+}
+
+.menu-traffic {
+  list-style: none;
+  display: flex;
+}
+
+.title-traffic,
+.li-traffic {
+  color: #625da2;
+}
+
+.li-traffic {
+  margin-right: 35px;
+  font-size: 1.6rem;
+  padding: 6px 15px;
+  border-radius: 25px;
+}
+
+.li-traffic:hover {
+  background-color: #43c27a;
+  color: white;
+}
+
+.traffic-chart-container {
+  width: 100%;
+  height: 300px;
+  border: 2px solid red;
+}
+
+/* --------------------------------------------------
+                   MEDIA QUERIES
   -------------------------------------------------- */
 @media screen and (min-width: 768px) {
   .grid-container {

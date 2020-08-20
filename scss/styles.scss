@@ -1,7 +1,8 @@
 $color-header-bgc: #6061b6;
 $color-nav-bgc: #3b3861;
 $color-headeer-search: #dddddd;
-
+$color-main-text: lighten($color-nav-bgc, 20%);
+$color-traffic-menu: #43c27a;
 * {
    margin: 0;
    padding: 0;
@@ -140,6 +141,7 @@ main {
 .dash-title {
    margin-right: 40px;
    margin-left: 25px;
+   font-size: 2rem;
    color: $color-header-bgc;
 }
 
@@ -214,7 +216,56 @@ main {
 /* ---------------> MAIN CONTENT ENDS <---- */
 
 /* --------------------------------------------------
-               MEDIA QUERIES
+                   TRAFFIC LINE CHART
+  -------------------------------------------------- */
+.traffic-section {
+   border: 2px solid red;
+}
+
+.header-traffic {
+   height: 90px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 2px solid red;
+   //! FIX RESPONSIVENESS FOR TRAFFIC HEADER
+}
+
+.title-traffic {
+   margin-left: 26px;
+   font-size: 1.3rem;
+}
+
+.menu-traffic {
+   list-style: none;
+   display: flex;
+}
+
+.title-traffic,
+.li-traffic {
+   color: $color-main-text;
+}
+
+.li-traffic {
+   margin-right: 35px;
+   font-size: 1.6rem;
+   padding: 6px 15px;
+   border-radius: 25px;
+}
+
+.li-traffic:hover {
+   background-color: $color-traffic-menu;
+   color: white;
+}
+
+.traffic-chart-container {
+   width: 100%;
+   height: 300px;
+   border: 2px solid red;
+}
+
+/* --------------------------------------------------
+                   MEDIA QUERIES
   -------------------------------------------------- */
 
 @media screen and (min-width: 768px) {

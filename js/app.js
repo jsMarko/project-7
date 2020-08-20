@@ -7,7 +7,7 @@ closeBtn.addEventListener("click", () => {
 
 let trafficChart = document.querySelector("#chartjs-traffic").getContext("2d");
 
-let trafficLine = new chart("chartjs-traffic", {
+let trafficLine = new Chart("chartjs-traffic", {
    type: "line",
    data: {
       labels: [
@@ -25,10 +25,24 @@ let trafficLine = new chart("chartjs-traffic", {
       ],
       datasets: [
          {
-            label: "TRAFFIC",
-            data: [500, 1000, 1500, 2000, 2500]
+            label: "", // ! Cant get rid of this... WHY?
+            data: [
+               500,
+               850,
+               1200,
+               740,
+               1500,
+               2100,
+               1200,
+               1850,
+               1300,
+               1400,
+               2100
+            ]
          }
       ]
    },
-   options: {}
+   options: {
+      maintainAspectRatio: false
+   }
 });
