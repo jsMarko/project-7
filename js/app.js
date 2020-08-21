@@ -54,32 +54,6 @@ let trafficLine = new Chart("chartjs-traffic", {
    }
 });
 
-let mobileUserChart = document.querySelector("#mobile-users").getContext("2d");
-
-let mobileDoughnut = new Chart("mobile-users", {
-   type: "doughnut",
-   data: {
-      labels: ["phone", "Tablet", "Desktop"],
-      datasets: [
-         {
-            data: [50, 100, 150],
-            borderWidth: 1,
-            borderColor: "#888",
-            hoverBorderWidth: 3,
-            hoverBorderColor: "#000"
-         }
-      ]
-   },
-   options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: {
-         display: true
-      },
-      backgroundColor: ["#5F61B6", "#43C27A", "#3EA4B4"]
-   }
-});
-
 let dailyChart = document.querySelector("#daily-traffic").getContext("2d");
 
 let dailyBar = new Chart("daily-traffic", {
@@ -101,6 +75,36 @@ let dailyBar = new Chart("daily-traffic", {
       maintainAspectRatio: false,
       legend: {
          display: false
+      }
+   }
+});
+
+let mobileUserChart = document.querySelector("#mobile-users").getContext("2d");
+
+let mobileDoughnut = new Chart("mobile-users", {
+   type: "doughnut",
+   data: {
+      labels: ["Phone", "Tablet", "Desktop"],
+      datasets: [
+         {
+            data: [50, 100, 150],
+            borderWidth: 1,
+            borderColor: "#888",
+            hoverBorderWidth: 3,
+            hoverBorderColor: "#000"
+         }
+      ]
+   },
+   options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+         display: true,
+         position: "right",
+         labels: {
+            fontColor: "#7C7C7C"
+         },
+         backgroundColor: ["#5F61B6", "#43C27A", "#3EA4B4"]
       }
    }
 });
