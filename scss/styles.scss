@@ -295,9 +295,9 @@ main {
 .mobile-users-container {
    margin-top: 35px;
    padding-bottom: 20px;
-   // padding-left: 20px;
+
    width: 100%;
-   // height: auto;
+
    border: 2px solid red;
 }
 
@@ -376,12 +376,13 @@ main {
       flex-wrap: nowrap;
    }
 
-   .li-traffic {
-      // margin-left: 5px;
-   }
-
    .traffic-chart-container {
       height: 350px !important;
+   }
+
+   .half-charts-wrapper {
+      //! Trying to place half charts side by side
+      // display: flex;
    }
 }
 

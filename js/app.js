@@ -1,5 +1,8 @@
 const alertBar = document.querySelector(".alert-bar");
 const closeBtn = document.querySelector(".close-alert");
+const purple = "#6060B1";
+const darkGreen = "#62A2B1";
+const lightGreen = "#70C07C";
 
 closeBtn.addEventListener("click", () => {
    alertBar.style.display = "none";
@@ -66,7 +69,8 @@ let dailyBar = new Chart("daily-traffic", {
             borderWidth: 1,
             borderColor: "#888",
             hoverBorderWidth: 3,
-            hoverBorderColor: "#000"
+            hoverBorderColor: "#000",
+            backgroundColor: purple
          }
       ]
    },
@@ -91,7 +95,8 @@ let mobileDoughnut = new Chart("mobile-users", {
             borderWidth: 1,
             borderColor: "#888",
             hoverBorderWidth: 3,
-            hoverBorderColor: "#000"
+            hoverBorderColor: "#000",
+            backgroundColor: [lightGreen, darkGreen, purple]
          }
       ]
    },
