@@ -9,7 +9,6 @@ canvas {
 }
 
 body {
-  height: 100vh;
   background: #222;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@ body {
 
 .grid-container {
   background-color: #fafafa;
-  height: 100vh;
   width: 100vw;
   display: grid;
   grid-template-columns: min-max(0, 1fr);
@@ -254,18 +252,30 @@ main {
                    DAILY TRAFFIC HALF CHART
   -------------------------------------------------- */
 .half-charts-wrapper {
+  margin-top: 10px;
   width: 100%;
   height: 600px;
   border: 2px solid red;
+}
+
+.daily-traffic-title {
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 /* --------------------------------------------------
                    MOBILE USERS HALF CHART
   -------------------------------------------------- */
 .mobile-users-container {
+  margin-top: 35px;
+  padding-bottom: 20px;
   width: 100%;
-  height: 600px;
   border: 2px solid red;
+}
+
+.mobile-users-title {
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 /* --------------------------------------------------

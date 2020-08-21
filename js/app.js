@@ -62,7 +62,7 @@ let dailyBar = new Chart("daily-traffic", {
       labels: ["S", "M", "T", "W", "T", "F", "S"],
       datasets: [
          {
-            data: [50, 100, 150, 200, 250],
+            data: [50, 120, 221, 175, 250, 120, 130],
             borderWidth: 1,
             borderColor: "#888",
             hoverBorderWidth: 3,
