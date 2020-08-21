@@ -9,6 +9,7 @@ canvas {
 }
 
 body {
+  height: 100vh;
   background: #222;
   display: flex;
   flex-direction: column;
@@ -244,6 +245,11 @@ main {
   color: white;
 }
 
+.traffic-chart-container {
+  padding-left: 10px;
+  border: 2px solid red;
+}
+
 /* --------------------------------------------------
                    MEDIA QUERIES
   -------------------------------------------------- */
@@ -305,10 +311,18 @@ main {
   .menu-traffic {
     flex-wrap: nowrap;
   }
+
+  .traffic-chart-container {
+    height: 350px !important;
+  }
 }
 @media screen and (min-width: 1024px) {
   .input-field {
     width: 500px;
+  }
+
+  .traffic-chart-container {
+    height: 350px !important;
   }
 }
 
