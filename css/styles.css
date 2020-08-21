@@ -251,6 +251,24 @@ main {
 }
 
 /* --------------------------------------------------
+                   DAILY TRAFFIC HALF CHART
+  -------------------------------------------------- */
+.half-charts-wrapper {
+  width: 100%;
+  height: 600px;
+  border: 2px solid red;
+}
+
+/* --------------------------------------------------
+                   MOBILE USERS HALF CHART
+  -------------------------------------------------- */
+.mobile-users-container {
+  width: 100%;
+  height: 600px;
+  border: 2px solid red;
+}
+
+/* --------------------------------------------------
                    MEDIA QUERIES
   -------------------------------------------------- */
 @media screen and (min-width: 768px) {
