@@ -26,7 +26,7 @@ body {
 .grid-container {
    background-color: #fafafa;
    // height: 100vh;
-   width: 100vw;
+   // width: 100%;
    display: grid;
    grid-template-columns: min-max(0, 1fr);
    grid-auto-rows: 1fr 1fr 2fr;
@@ -279,7 +279,7 @@ main {
   -------------------------------------------------- */
 .half-charts-wrapper {
    margin-top: 10px;
-   width: 100%;
+   // width: 100%;
    height: 600px;
    border: 2px solid red;
 }
@@ -295,15 +295,53 @@ main {
 .mobile-users-container {
    margin-top: 35px;
    padding-bottom: 20px;
-
    width: 100%;
-
-   border: 2px solid red;
 }
 
 .mobile-users-title {
    margin-top: 10px;
    // margin-left: 20px;
+}
+
+/* --------------------------------------------------
+                   SOCIAL STATS
+  -------------------------------------------------- */
+
+.social-container {
+   padding: 15px 0;
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: repeat(3, 85px);
+   justify-content: center;
+   row-gap: 15px;
+   border: 2px solid red;
+}
+
+.box {
+   /*   margin-bottom: 10px; */
+   background-color: #fafafa;
+   border: 2px solid lightgrey;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.icon-circle {
+   border-radius: 50%;
+   width: 55px;
+   height: 55px;
+   margin-right: 20px;
+   background-color: #6060b1;
+}
+
+.social-title {
+   color: lighten(#6060b1, 10%);
+}
+
+.social-number {
+   font-size: 2rem;
+   color: lighten(#6060b1, 5%);
 }
 
 /* --------------------------------------------------
@@ -382,7 +420,24 @@ main {
 
    .half-charts-wrapper {
       //! Trying to place half charts side by side
-      // display: flex;
+      display: flex;
+   }
+
+   .mobile-users-container {
+      margin-top: 0;
+      padding-bottom: 20px;
+
+      // width: 100%;
+   }
+
+   // ! SOCIAL STATS
+   .social-container {
+      padding: 15px 0;
+
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: 85px;
+      justify-content: center;
+      column-gap: 5px;
    }
 }
 
@@ -391,7 +446,14 @@ main {
       width: 500px;
    }
 
-   .traffic-chart-container {
-      height: 350px !important;
+   // SOCIAL STATS
+
+   .social-container {
+      padding: 15px 0;
+
+      grid-template-columns: repeat(3, 200px);
+      grid-template-rows: 85px;
+      justify-content: center;
+      column-gap: 25px;
    }
 }
