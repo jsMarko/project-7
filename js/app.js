@@ -91,7 +91,7 @@ let mobileDoughnut = new Chart("mobile-users", {
       labels: ["Phone", "Tablet", "Desktop"],
       datasets: [
          {
-            data: [50, 100, 150],
+            data: [50, 50, 200],
             borderWidth: 1,
             borderColor: "#888",
             hoverBorderWidth: 3,

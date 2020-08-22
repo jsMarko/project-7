@@ -20,7 +20,7 @@ body {
   background-color: #fafafa;
   display: grid;
   grid-template-columns: min-max(0, 1fr);
-  grid-auto-rows: 1fr 1fr 2fr;
+  grid-auto-rows: 250px 220px 2fr;
   /* grid-gap: 2px; */
   grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "main main main main";
   max-width: 1450px;
@@ -32,7 +32,6 @@ body {
 .main-header {
   grid-area: header;
   background-color: #6061b6;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,10 +69,9 @@ sup {
 }
 
 .profile {
-  margin-left: 45px;
+  margin-left: 15px;
   display: flex;
   align-items: center;
-  padding: 5px;
 }
 
 .profile-img {
@@ -96,7 +94,7 @@ sup {
   grid-area: nav;
   background-color: #3b3861;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -118,23 +116,20 @@ main {
 }
 
 .main-content-header {
-  height: 130px;
-  padding-top: 15px;
+  padding: 35px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .dash-title {
-  margin-right: 40px;
-  margin-left: 25px;
+  margin-bottom: 20px;
   font-size: 2rem;
   color: #6061b6;
 }
 
 .header-search-container {
   width: 100%;
-  height: 100%;
   background-color: #f1f1f1;
   display: flex;
   justify-content: flex-end;
@@ -164,18 +159,15 @@ main {
 
 /* ================ ALERT BAR ============= */
 .alert-container {
-  width: 100%;
-  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .alert-bar {
-  width: 100%;
   background-color: #6061b6;
   color: white;
-  padding: 8px 0;
+  padding: 10px 0;
   padding-left: 10px;
   border-radius: 5px;
   display: flex;
@@ -208,7 +200,6 @@ main {
 }
 
 .header-traffic {
-  width: 100%;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
@@ -242,18 +233,11 @@ main {
   color: white;
 }
 
-.traffic-chart-container {
-  padding-left: 10px;
-  border: 2px solid red;
-}
-
 /* --------------------------------------------------
                    DAILY TRAFFIC HALF CHART
   -------------------------------------------------- */
 .half-charts-wrapper {
   margin-top: 10px;
-  height: 600px;
-  border: 2px solid red;
 }
 
 .daily-traffic-title {
@@ -283,7 +267,6 @@ main {
   grid-template-rows: repeat(3, 85px);
   justify-content: center;
   row-gap: 15px;
-  border: 2px solid red;
 }
 
 .box {
