@@ -15,28 +15,23 @@ canvas {
 }
 
 body {
-   // height: 100%;
    background: #222;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   /* border: 2px solid red; */
+   margin: 0 auto;
+   max-width: 1450px;
 }
 
 .grid-container {
    background-color: #fafafa;
-   // height: 100vh;
-   // width: 100%;
    display: grid;
-   grid-template-columns: min-max(0, 1fr);
-   grid-auto-rows: 250px 220px 2fr;
-   /* grid-gap: 2px; */
+   grid-template-columns: 100%;
+   grid-auto-rows: auto;
    grid-template-areas:
-      "header header header header"
-      "nav nav nav nav"
-      "main main main main"
-      "main main main main";
-   max-width: 1450px;
+      "header"
+      "nav"
+      "main";
+   border: 2px solid red;
 }
 
 /* --------------------------------------------------
@@ -45,7 +40,7 @@ body {
 .main-header {
    grid-area: header;
    background-color: $color-header-bgc;
-   // width: 100%;
+   padding: 30px 0;
 
    display: flex;
    flex-direction: column;
@@ -112,6 +107,8 @@ sup {
 .nav {
    grid-area: nav;
    background-color: $color-nav-bgc;
+   padding: 30px 0;
+
    display: flex;
    justify-content: space-evenly;
    align-items: center;
@@ -137,7 +134,6 @@ main {
 }
 
 .main-content-header {
-   // height: 130px;
    padding: 35px 0;
    display: flex;
    flex-direction: column;
@@ -145,8 +141,6 @@ main {
 }
 
 .dash-title {
-   // margin-right: 40px;
-   // margin-left: 25px;
    margin-bottom: 20px;
    font-size: 2rem;
    color: $color-header-bgc;
@@ -154,7 +148,6 @@ main {
 
 .header-search-container {
    width: 100%;
-   // height: 100%;
    background-color: lighten($color-headeer-search, 8%);
    display: flex;
    justify-content: flex-end;
@@ -186,16 +179,12 @@ main {
 /* ================ ALERT BAR ============= */
 
 .alert-container {
-   // width: 100%;
-   // height: 100px;
-
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
 .alert-bar {
-   // width: 100%;
    background-color: #6061b6;
    color: white;
    padding: 10px 0;
@@ -232,7 +221,6 @@ main {
 }
 
 .header-traffic {
-   // width: 100%;
    padding: 10px 0;
    display: flex;
    flex-direction: column;
@@ -276,32 +264,40 @@ main {
 //  End of TRAFFIC LINE CHART
 
 /* --------------------------------------------------
-                   DAILY TRAFFIC HALF CHART
+                  HALF CHARTS
   -------------------------------------------------- */
 .half-charts-wrapper {
-   margin-top: 10px;
-   // width: 100%;
-   // height: 600px;
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: auto;
+   grid-template-areas:
+      "daily"
+      "mobile";
    // border: 2px solid red;
 }
 
-.daily-traffic-title {
-   margin-top: 10px;
-   // margin-left: 20px;
+.daily-traffic-container {
+   grid-area: daily;
 }
 
-/* --------------------------------------------------
-                   MOBILE USERS HALF CHART
-  -------------------------------------------------- */
 .mobile-users-container {
-   margin-top: 35px;
-   padding-bottom: 20px;
-   width: 100%;
+   grid-area: mobile;
 }
 
-.mobile-users-title {
-   margin-top: 10px;
-   // margin-left: 20px;
+.mobile-users-container,
+.daily-traffic-container {
+   border: 2px solid red;
+}
+
+.modile-header,
+.daily-header {
+   // border: 2px solid red;
+}
+
+.mobile-users-title,
+.daily-traffic-title {
+   padding: 10px;
+   color: #4d4aa7;
 }
 
 /* --------------------------------------------------
@@ -420,8 +416,9 @@ main {
    }
 
    .half-charts-wrapper {
-      //! Trying to place half charts side by side
-      display: flex;
+      grid-template-columns: repeat(2, 50%);
+      // grid-template-rows: auto;
+      grid-template-areas: "daily mobile";
    }
 
    .mobile-users-container {

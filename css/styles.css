@@ -12,18 +12,17 @@ body {
   background: #222;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* border: 2px solid red; */
+  margin: 0 auto;
+  max-width: 1450px;
 }
 
 .grid-container {
   background-color: #fafafa;
   display: grid;
-  grid-template-columns: min-max(0, 1fr);
-  grid-auto-rows: 250px 220px 2fr;
-  /* grid-gap: 2px; */
-  grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "main main main main";
-  max-width: 1450px;
+  grid-template-columns: 100%;
+  grid-auto-rows: auto;
+  grid-template-areas: "header" "nav" "main";
+  border: 2px solid red;
 }
 
 /* --------------------------------------------------
@@ -32,6 +31,7 @@ body {
 .main-header {
   grid-area: header;
   background-color: #6061b6;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,6 +93,7 @@ sup {
 .nav {
   grid-area: nav;
   background-color: #3b3861;
+  padding: 30px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -234,27 +235,32 @@ main {
 }
 
 /* --------------------------------------------------
-                   DAILY TRAFFIC HALF CHART
+                  HALF CHARTS
   -------------------------------------------------- */
 .half-charts-wrapper {
-  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "daily" "mobile";
 }
 
-.daily-traffic-title {
-  margin-top: 10px;
+.daily-traffic-container {
+  grid-area: daily;
 }
 
-/* --------------------------------------------------
-                   MOBILE USERS HALF CHART
-  -------------------------------------------------- */
 .mobile-users-container {
-  margin-top: 35px;
-  padding-bottom: 20px;
-  width: 100%;
+  grid-area: mobile;
 }
 
-.mobile-users-title {
-  margin-top: 10px;
+.mobile-users-container,
+.daily-traffic-container {
+  border: 2px solid red;
+}
+
+.mobile-users-title,
+.daily-traffic-title {
+  padding: 10px;
+  color: #4d4aa7;
 }
 
 /* --------------------------------------------------
@@ -362,7 +368,8 @@ main {
   }
 
   .half-charts-wrapper {
-    display: flex;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-areas: "daily mobile";
   }
 
   .mobile-users-container {
