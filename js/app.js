@@ -76,7 +76,7 @@ let dailyBar = new Chart("daily-traffic", {
    },
    options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       legend: {
          display: false
       }
@@ -102,7 +102,7 @@ let mobileDoughnut = new Chart("mobile-users", {
    },
    options: {
       responsive: true,
-      maintainAspectRatio: false,
+      maintainAspectRatio: true,
       legend: {
          display: true,
          position: "right",
