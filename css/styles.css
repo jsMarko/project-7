@@ -316,8 +316,14 @@ main {
 }
 
 /* --------------------------------------------------
-                   NEW MEMBERS
+            NEW MEMBERS / RECERNT ACTIVITY
   -------------------------------------------------- */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
 .member-header {
   padding: 10px;
 }
@@ -427,6 +433,11 @@ main {
     grid-template-rows: 90px;
     justify-content: center;
     column-gap: 5px;
+  }
+
+  .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 
   .members-text-container {

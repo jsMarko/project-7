@@ -347,12 +347,20 @@ main {
 }
 
 /* --------------------------------------------------
-                   NEW MEMBERS
+            NEW MEMBERS / RECERNT ACTIVITY
   -------------------------------------------------- */
-
-.members-container {
-   // border: 2px solid red;
+//  ! Just placed GRID WRAPPER HERE and IN MEDIA QUERY 768PX
+//  ! Not working!!! but it works fine in codepen https://codepen.io/jsMarko/pen/dyMNVgE?editors=1100
+.grid-wrapper {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto;
 }
+
+//  .box {
+//    height: 300px;
+//    border: 1px solid red;
+//  }
 
 .member-header {
    padding: 10px;
@@ -477,7 +485,13 @@ main {
       column-gap: 5px;
    }
 
-   // ! NEW MEMBERS
+   //! GRID WRAPPER *** NOT WORKING *** NOT SURE WHY
+   .grid-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+   }
+
+   // ^ NEW MEMBERS
    .members-text-container {
       width: 100%;
       height: 100%;
