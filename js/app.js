@@ -3,6 +3,52 @@ const closeBtn = document.querySelector(".close-alert");
 const purple = "#6060B1";
 const darkGreen = "#62A2B1";
 const lightGreen = "#70C07C";
+const msgCloseBtn = document.querySelector(".msgCloseBtn");
+const bellBtn = document.querySelector(".notification-bell");
+
+// ! STILL NEED TO ADD MARKER NEXT TO BELL ICON
+bellBtn.addEventListener("click", (e) => {
+   const button = e.target;
+   const popup = document.querySelector(".popup");
+   const alertMsgs = popUpCon.querySelectorAll(".hide");
+   console.log(alertMsgs.length);
+
+   const marker = document.querySelector(".marker");
+   marker.style.display = "none";
+
+   if (alertMsgs.length === 3) {
+      console.log("You have no more messages");
+      const noMsg = document.querySelector(".noMsg-marker");
+      noMsg.style.opacity = "1";
+   } else {
+      if (popup.classList.contains("hide")) {
+         console.log("hide was found");
+         popup.classList.remove("hide");
+      } else {
+         popup.classList.add("hide");
+      }
+   }
+});
+
+// ! ****** ClOSE MESSAGES IN POPUP *********
+const popUpCon = document.querySelector(".popup");
+
+popUpCon.addEventListener("click", (e) => {
+   const tgt = e.target;
+   const alertMsgs = popUpCon.querySelectorAll(".message");
+   // console.log(alertMsgs.length);
+
+   if (tgt.classList.contains("msgCloseBtn")) {
+      if (alertMsgs.length === 1) {
+         console.log("Close Container");
+         tgt.closest(".message").className = "hide";
+         popUpCon.className = "popup hide";
+      } else {
+         console.log("Close One Message");
+         tgt.closest(".message").className = "hide";
+      }
+   }
+});
 
 closeBtn.addEventListener("click", () => {
    alertBar.style.display = "none";
