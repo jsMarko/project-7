@@ -120,6 +120,12 @@ sup {
    z-index: 1;
 }
 
+.notification-bell:hover {
+   transition: 0.5s ease-out;
+   transform: scale(1.4);
+   filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(2);
+}
+
 .marker {
    position: absolute;
    left: 30px;
@@ -155,13 +161,14 @@ sup {
    margin-left: 15px;
    display: flex;
    align-items: center;
-   // padding: 5px;
+   user-select: none;
 }
 
 .profile-img {
    border-radius: 50%;
    width: 3.5rem;
    height: 3.5rem;
+   user-select: none;
 }
 
 .user-name {
