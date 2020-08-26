@@ -457,7 +457,7 @@ main {
    margin-bottom: 10px;
    height: 100px;
    display: grid;
-   grid-template-columns: 100px auto;
+   grid-template-columns: minmax(0, 100px) minmax(0, auto);
    gap: 5px;
 }
 
