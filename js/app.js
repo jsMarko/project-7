@@ -54,56 +54,125 @@ closeBtn.addEventListener("click", () => {
    alertBar.style.display = "none";
 });
 
-let trafficChart = document.querySelector("#chartjs-traffic").getContext("2d");
+const trafficBtns = document.querySelectorAll(".li-traffic");
 
-let trafficLine = new Chart("chartjs-traffic", {
-   type: "line",
-   data: {
-      labels: [
-         "16-22",
-         "23-29",
-         "30-5",
-         "6-12",
-         "13-19",
-         "20-26",
-         "17-3",
-         "4-10",
-         "11-17",
-         "18-24",
-         "25-31"
-      ],
-      datasets: [
-         {
-            data: [
-               500,
-               850,
-               1200,
-               740,
-               1500,
-               2100,
-               1200,
-               1850,
-               1300,
-               1400,
-               2100
-            ],
-            borderWidth: 1,
-            borderColor: "#888",
-            hoverBorderWidth: 3,
-            hoverBorderColor: "#000"
-         }
-      ]
-   },
-   options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      legend: {
-         display: false
+trafficBtns.forEach((btn) => {
+   btn.addEventListener("click", () => {
+      if (btn.textContent === "Hourly") {
+         hourly();
+      } else if (btn.textContent === "Daily") {
+         daily();
+      } else if (btn.textContent === "Weekly") {
+         weekly();
+      } else if (btn.textContent === "Monthly") {
+         monthly();
       }
-   }
+   });
 });
 
-let dailyChart = document.querySelector("#daily-traffic").getContext("2d");
+daily();
+
+function hourly() {
+   let trafficLine = new Chart("chartjs-traffic", {
+      type: "line",
+      data: {
+         labels: ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm", "8pm"],
+         datasets: [
+            {
+               data: [0, 20, 10, 18, 22, 21, 35, 47, 21, 40, 50],
+               borderWidth: 1,
+               borderColor: "#888",
+               hoverBorderWidth: 3,
+               hoverBorderColor: "#000"
+            }
+         ]
+      },
+      options: {
+         responsive: true,
+         maintainAspectRatio: false,
+         legend: {
+            display: false
+         }
+      }
+   });
+}
+
+function daily() {
+   let trafficLine = new Chart("chartjs-traffic", {
+      type: "line",
+      data: {
+         labels: ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+         datasets: [
+            {
+               data: [0, 100, 71, 331, 183, 118, 105, 320, 455, 165, 225, 500],
+               borderWidth: 1,
+               borderColor: "#888",
+               hoverBorderWidth: 3,
+               hoverBorderColor: "#000"
+            }
+         ]
+      },
+      options: {
+         responsive: true,
+         maintainAspectRatio: false,
+         legend: {
+            display: false
+         }
+      }
+   });
+}
+
+function weekly() {
+   let trafficLine = new Chart("chartjs-traffic", {
+      type: "line",
+      data: {
+         labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "17-3", "4-10", "11-17", "18-24", "25-31"],
+         datasets: [
+            {
+               data: [0, 750, 1200, 500, 1500, 2100, 1200, 1850, 1300, 1400, 2500],
+               borderWidth: 1,
+               borderColor: "#888",
+               hoverBorderWidth: 3,
+               hoverBorderColor: "#000"
+            }
+         ]
+      },
+      options: {
+         responsive: true,
+         maintainAspectRatio: false,
+         legend: {
+            display: false
+         }
+      }
+   });
+}
+
+function monthly() {
+   let trafficLine = new Chart("chartjs-traffic", {
+      type: "line",
+      data: {
+         labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+         datasets: [
+            {
+               data: [500, 850, 1200, 740, 1500, 1710, 1200, 1850, 1300, 1400, 1743, 2100],
+               borderWidth: 1,
+               borderColor: "#888",
+               hoverBorderWidth: 3,
+               hoverBorderColor: "#000"
+            }
+         ]
+      },
+      options: {
+         responsive: true,
+         maintainAspectRatio: false,
+         legend: {
+            display: false
+         }
+      }
+   });
+}
+
+// let dailyChart = document.querySelector("#daily-traffic").getContext("2d");
 
 let dailyBar = new Chart("daily-traffic", {
    type: "bar",
@@ -129,7 +198,7 @@ let dailyBar = new Chart("daily-traffic", {
    }
 });
 
-let mobileUserChart = document.querySelector("#mobile-users").getContext("2d");
+// let mobileUserChart = document.querySelector("#mobile-users").getContext("2d");
 
 let mobileDoughnut = new Chart("mobile-users", {
    type: "doughnut",
