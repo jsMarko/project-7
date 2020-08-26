@@ -193,17 +193,22 @@ sup {
 --------------------------------------------------- */
 main {
   grid-area: main;
+  padding: 0 20px;
 }
 
 .main-content-header {
-  padding: 35px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px solid red;
+}
+
+.dash-title-container {
+  border: 2px solid red;
 }
 
 .dash-title {
-  margin-bottom: 20px;
+  margin-left: 3px;
   font-size: 2rem;
   color: #6061b6;
 }
@@ -214,6 +219,7 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  border: 2px solid red;
 }
 
 .header-search-container i {
@@ -242,6 +248,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid red;
 }
 
 .alert-bar {
@@ -465,10 +472,6 @@ main {
     justify-content: space-around;
   }
 
-  .header-search-container {
-    padding-right: 25px;
-  }
-
   .input-field {
     max-width: 400px;
     height: 45px;
@@ -476,17 +479,13 @@ main {
   }
 
   .alert-bar {
-    width: 96%;
+    width: 100%;
   }
 
   .header-traffic {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .title-traffic {
-    margin-left: 15px;
   }
 
   .menu-traffic {

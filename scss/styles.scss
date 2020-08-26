@@ -211,17 +211,23 @@ sup {
 
 main {
    grid-area: main;
+   padding: 0 20px;
 }
 
 .main-content-header {
-   padding: 35px 0;
+   // padding: 35px 0;
    display: flex;
    flex-direction: column;
    align-items: center;
+   border: 2px solid red;
+}
+
+.dash-title-container {
+   border: 2px solid red;
 }
 
 .dash-title {
-   margin-bottom: 20px;
+   margin-left: 3px;
    font-size: 2rem;
    color: $color-header-bgc;
 }
@@ -232,6 +238,7 @@ main {
    display: flex;
    justify-content: flex-end;
    align-items: center;
+   border: 2px solid red;
 }
 
 .header-search-container i {
@@ -262,6 +269,7 @@ main {
    display: flex;
    justify-content: center;
    align-items: center;
+   border: 2px solid red;
 }
 
 .alert-bar {
@@ -511,7 +519,7 @@ main {
    }
 
    .header-search-container {
-      padding-right: 25px;
+      // padding-right: 25px;
    }
 
    .input-field {
@@ -521,7 +529,7 @@ main {
    }
 
    .alert-bar {
-      width: 96%;
+      width: 100%;
    }
 
    .header-traffic {
@@ -532,7 +540,7 @@ main {
    }
 
    .title-traffic {
-      margin-left: 15px;
+      // margin-left: 15px;
    }
 
    .menu-traffic {

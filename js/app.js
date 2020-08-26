@@ -70,7 +70,7 @@ trafficBtns.forEach((btn) => {
    });
 });
 
-daily();
+weekly();
 
 function hourly() {
    let trafficLine = new Chart("chartjs-traffic", {
@@ -89,7 +89,7 @@ function hourly() {
       },
       options: {
          responsive: true,
-         maintainAspectRatio: false,
+         maintainAspectRatio: true,
          legend: {
             display: false
          }
@@ -114,7 +114,7 @@ function daily() {
       },
       options: {
          responsive: true,
-         maintainAspectRatio: false,
+         maintainAspectRatio: true,
          legend: {
             display: false
          }
@@ -164,7 +164,7 @@ function monthly() {
       },
       options: {
          responsive: true,
-         maintainAspectRatio: false,
+         maintainAspectRatio: true,
          legend: {
             display: false
          }
