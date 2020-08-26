@@ -3,14 +3,8 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
-         rel="stylesheet"
-      />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
       <title>WebApp DashBoard</title>
       <link rel="stylesheet" href="css/styles.css" />
@@ -18,24 +12,18 @@
    <body>
       <div class="grid-container">
          <header class="main-header">
-            <h1 class="logo">
-               <span class="logo-name-your">Your</span>App<sup>TM</sup>
-            </h1>
+            <h1 class="logo"><span class="logo-name-your">Your</span>App<sup>TM</sup></h1>
             <div class="user-notification">
                <div class="marker"></div>
-               <div class="noMsg-marker"><p class="marker-text"> No Msg's</p></div>
-               <!--------------- NOTIFICATION BELL ------->
-               <svg
-                  class="notification-bell"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 32 32"
-               >
+               <div class="noMsg-marker"><p class="marker-text">No Msg's</p></div>
+
+               <svg class="notification-bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                   <path
                      d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z"
                   />
                </svg>
                <div class="profile">
-                  <img class="profile-img" src="images/profile.png" alt="" />
+                  <img class="profile-img" src="images/profile.png" alt="Mark" />
                   <h3 class="user-name">Mark Branscum</h3>
                </div>
             </div>
@@ -57,16 +45,16 @@
          </header>
          <nav class="nav">
             <a href="#">
-               <img class="nav-icons" src="icons/icon-dashboard.svg" alt="" />
+               <img class="nav-icons" src="icons/icon-dashboard.svg" alt="icon" />
             </a>
             <a href="#">
-               <img class="nav-icons" src="icons/icon-members.svg" alt="" />
+               <img class="nav-icons" src="icons/icon-members.svg" alt="icon" />
             </a>
             <a href="#">
-               <img class="nav-icons" src="icons/icon-visits.svg" alt="" />
+               <img class="nav-icons" src="icons/icon-visits.svg" alt="icon" />
             </a>
             <a href="#">
-               <img class="nav-icons" src="icons/icon-settings.svg" alt="" />
+               <img class="nav-icons" src="icons/icon-settings.svg" alt="icon" />
             </a>
          </nav>
          <main class="main-content">
@@ -75,27 +63,19 @@
                <div class="dash-title-container">
                   <h2 class="dash-title">Dashboard</h2>
                </div>
-               <div class="header-search-container">
-                  <input
-                     type="text"
-                     class="input-field"
-                     placeholder="Search"
-                  /><i class="fa fa-search icon"></i>
-               </div>
+               <div class="header-search-container"><input type="text" class="input-field" placeholder="Search" /><i class="fa fa-search icon"></i></div>
             </header>
 
-            <!-- -------- ALERT BAR -->
             <div class="alert-container">
                <div class="alert-bar">
                   <p class="alert-message">
-                     <span class="span-alert">Alert</span> Lorem ipsum dolor
-                     sit, amet consectetur adipisicing elit. Deserunt ea magni
-                     tempore placeat minus, harum nesciunt!
+                     <span class="span-alert">Alert</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt ea magni tempore placeat minus, harum
+                     nesciunt!
                   </p>
                   <p class="close-alert">X</p>
                </div>
             </div>
-            <!-- !------------  TRAFFIC CHART -->
+            <!-- !  TRAFFIC CHART -->
             <section class="traffic-section">
                <header class="header-traffic">
                   <h3 class="title-traffic">TRAFFIC</h3>
@@ -107,19 +87,13 @@
                   </ul>
                </header>
 
-               <div
-                  class="traffic-chart-container"
-                  style="width: 100%; height: 250px;"
-               >
+               <div class="traffic-chart-container" style="width: 100%; height: 250px">
                   <canvas id="chartjs-traffic"></canvas>
                </div>
             </section>
-            <!--! End of Traffic Section --->
+            <!--! End of Traffic Section -->
             <section class="half-charts-wrapper">
-               <div
-                  class="daily-traffic-container"
-                  style="width: 100%; height: auto;"
-               >
+               <div class="daily-traffic-container" style="width: 100%; height: auto">
                   <div class="daily-header">
                      <h3 class="daily-traffic-title">DAILY TRAFFIC</h3>
                   </div>
@@ -127,10 +101,7 @@
                      <canvas id="daily-traffic"></canvas>
                   </div>
                </div>
-               <div
-                  class="mobile-users-container"
-                  style="width: 100%; height: auto;"
-               >
+               <div class="mobile-users-container" style="width: 100%; height: auto">
                   <div class="modile-header">
                      <h3 class="mobile-users-title">MOBILE USERS</h3>
                   </div>
@@ -148,11 +119,7 @@
                <div class="social-wrapper">
                   <div class="twitter-container box">
                      <div class="icon-circle">
-                        <svg
-                           xmlns="http://www.w3.org/2000/svg"
-                           viewBox="0 0 32 32"
-                           class="twitter-icon"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="twitter-icon">
                            <path
                               fill="white"
                               d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"
@@ -166,12 +133,7 @@
                   </div>
                   <div class="facebook-container box">
                      <div class="icon-circle">
-                        <svg
-                           class="facebook-icon"
-                           height="56.693"
-                           width="56.693"
-                           xmlns="http://www.w3.org/2000/svg"
-                        >
+                        <svg class="facebook-icon" height="56.693" width="56.693" xmlns="http://www.w3.org/2000/svg">
                            <path
                               fill="white"
                               d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"
@@ -185,11 +147,7 @@
                   </div>
                   <div class="goople-container box">
                      <div class="icon-circle">
-                        <svg
-                           xmlns="http://www.w3.org/2000/svg"
-                           viewBox="0 0 32 32"
-                           class="google-icon"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="google-icon">
                            <path
                               fill="white"
                               d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"
@@ -204,204 +162,189 @@
                </div>
             </section>
 
-         <div class="grid-wrapper">
-            
-            <section class="new-member-section">
-               <div class="member-header">
-                  <h3 class="member-title">NEW MEMBERS</h3>
-               </div>
-               <div class="members-container">
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-1.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>Cindy Martin</p>
-                              <a href="#">cindy.martin@example.com</a>
+            <div class="grid-wrapper">
+               <section class="new-member-section">
+                  <div class="member-header">
+                     <h3 class="member-title">NEW MEMBERS</h3>
+                  </div>
+                  <div class="members-container">
+                     <div class="member-info">
+                        <div class="nested-member">
+                           <img src="images/member-1.jpg" class="member-img" alt="a member" />
+                        </div>
+                        <div class="nested-member">
+                           <div class="members-text-container">
+                              <div class="members-text">
+                                 <p>Cindy Martin</p>
+                                 <a href="#">cindy.martin@example.com</a>
+                              </div>
+                              <div class="members-date">
+                                 <p>10/20/20</p>
+                              </div>
                            </div>
-                           <div class="members-date">
-                              <p>10/20/20</p>
+                        </div>
+                     </div>
+
+                     <div class="member-info">
+                        <div class="nested-member">
+                           <img src="images/member-2.jpg" class="member-img" alt="member 2" />
+                        </div>
+                        <div class="nested-member">
+                           <div class="members-text-container">
+                              <div class="members-text">
+                                 <p>Clark Kent</p>
+                                 <a href="#">ClarkKent@example.com</a>
+                              </div>
+                              <div class="members-date">
+                                 <p>10/20/20</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="member-info">
+                        <div class="nested-member">
+                           <img src="images/member-3.jpg" class="member-img" alt="member 3" />
+                        </div>
+                        <div class="nested-member">
+                           <div class="members-text-container">
+                              <div class="members-text">
+                                 <p>Susan Day</p>
+                                 <a href="#">SusanDay@example.com</a>
+                              </div>
+                              <div class="members-date">
+                                 <p>10/20/20</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="member-info">
+                        <div class="nested-member">
+                           <img src="images/member-4.jpg" class="member-img" alt="member 4" />
+                        </div>
+                        <div class="nested-member">
+                           <div class="members-text-container">
+                              <div class="members-text">
+                                 <p>John Mathis</p>
+                                 <a href="#">JohnMathis@example.com</a>
+                              </div>
+                              <div class="members-date">
+                                 <p>10/20/20</p>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
+               </section>
 
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-2.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>Clark Kent</p>
-                              <a href="#">ClarkKent@example.com</a>
-                           </div>
-                           <div class="members-date">
-                              <p>10/20/20</p>
+               <section class="new-member-section">
+                  <div class="member-header">
+                     <h3 class="member-title">RECENT ACTIVITY</h3>
+                  </div>
+                  <div class="members-container">
+                     <div class="member-info">
+                        <div class="nested-member">
+                           <img src="images/member-1.jpg" class="member-img" alt="member-1" />
+                        </div>
+                        <div class="nested-member">
+                           <div class="members-text-container">
+                              <div class="members-text">
+                                 <p>Cindy Martin</p>
+                                 <p>4 hours ago</p>
+                              </div>
+                              <p class="activity-time-posted">comented on YourApp's SEO Tips</p>
+                              <div class="members-date">
+                                 <p>></p>
+                              </div>
                            </div>
                         </div>
-                     </div>
-                     
-                  </div>
 
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-3.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>Susan Day</p>
-                              <a href="#">SusanDay@example.com</a>
+                        <div class="member-info">
+                           <div class="nested-member">
+                              <img src="images/member-2.jpg" class="member-img" alt="member-2" />
                            </div>
-                           <div class="members-date">
-                              <p>10/20/20</p>
+                           <div class="nested-member">
+                              <div class="members-text-container">
+                                 <div class="members-text">
+                                    <p>Clark Kent</p>
+                                    <p class="activity-time-posted">liked the post Facebook's Changes for 2020</p>
+                                 </div>
+                                 <div class="members-date">
+                                    <p>5 hours ago</p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                      </div>
-                     
-                  </div>
 
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-4.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>John Mathis</p>
-                              <a href="#">JohnMathis@example.com</a>
+                        <div class="member-info">
+                           <div class="nested-member">
+                              <img src="images/member-3.jpg" class="member-img" alt="member-3" />
                            </div>
-                           <div class="members-date">
-                              <p>10/20/20</p>
+                           <div class="nested-member">
+                              <div class="members-text-container">
+                                 <div class="members-text">
+                                    <p>Susan Day</p>
+                                    <p class="activity-time-posted">commentedd on Facebook's Changes for 2020</p>
+                                 </div>
+                                 <div class="members-date">
+                                    <p>5 hours ago</p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
-                     </div>
-                     </div>
-                  </div>
-              
-            </section> 
 
-            
-            <section class="new-member-section">
-               <div class="member-header">
-                  <h3 class="member-title">RECENT ACTIVITY</h3>
-               </div>
-               <div class="members-container">
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-1.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              
-                              <p>Cindy Martin</p>
-                              <p>4 hours ago</p>
+                        <div class="member-info">
+                           <div class="nested-member">
+                              <img src="images/member-4.jpg" class="member-img" alt="member-4" />
                            </div>
-                           <p class="activity-time-posted"> comented on YourApp's SEO Tips</p>
-                           <div class="members-date">
-                              <p>></p>
+                           <div class="nested-member">
+                              <div class="members-text-container">
+                                 <div class="members-text">
+                                    <p>John Mathis</p>
+                                    <p class="activity-time-posted">posted YourApp's SEO Tips</p>
+                                 </div>
+                                 <div class="members-date">
+                                    <p>1 day ago</p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
                   </div>
+               </section>
+               <!--^ END OF RECENT ACTIVITY SECTION -->
 
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-2.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>Clark Kent</p>
-                              <p class="activity-time-posted">liked the post Facebook's Changes for 2020</p>
-                           </div>
-                           <div class="members-date">
-                              <p>5 hours ago</p>
-                           </div>
-                        </div>
-                     </div>
-                     
+               <!-- ! MESSAGE USER SECTION -->
+               <section class="msgUser-section">
+                  <header class="msgUser-header">
+                     <h3 class="msgUser-title">MESSAGE USER</h3>
+                  </header>
+                  <form class="form-widget-container">
+                     <input type="text" placeholder="Search" class="userField" />
+                     <textarea placeholder="Message text for user"></textarea>
+                     <button class="send-btn">SEND</button>
+                  </form>
+               </section>
+
+               <!-- ! SETTINGS SECTION -->
+               <section class="settings-section">
+                  <header class="settings-header">
+                     <h3 class="settings-title">SETTINS</h3>
+                  </header>
+                  <div class="switch-container">
+                     <p class="send-email-text">Send Email Notification</p>
+                     <!-- ! PLUS ADD SWITCH HERE -->
+                     <p class="set-profile-text">Set Profile to Public</p>
                   </div>
-
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-3.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>Susan Day</p>
-                              <p class="activity-time-posted">commentedd on Facebook's Changes for 2020</p>
-                           </div>
-                           <div class="members-date">
-                              <p>5 hours ago</p>
-                           </div>
-                        </div>
-                      </div>
-                     
-                  </div>
-
-                  <div class="member-info">
-                     <div class="nested-member">
-                        <img src="images/member-4.jpg" class="member-img" />
-                     </div>
-                     <div class="nested-member">
-                        <div class="members-text-container">
-                           <div class="members-text">
-                              <p>John Mathis</p>
-                              <p class="activity-time-posted">posted YourApp's SEO Tips</p>
-                           </div>
-                           <div class="members-date">
-                              <p>1 day ago</p>
-                           </div>
-                        </div>
-                     </div>
-                     </div>
-                  </div>
-               </div>
-            </section> <!--^ --- END OF RECENT ACTIVITY SECTION -->
-
-            <!-- !MESSAGE USER SECTION -->
-            <section class="msgUser-section">
-              
-               <header class="msgUser-header">
-                  <h3 class="msgUser-title">MESSAGE USER</h3>
-               </header>
-               <form class="form-widget-container">
-                  <input type="text" placeholder="Search" class="userField">
-                  <textarea placeholder="Message text for user"></textarea>
-                  <button class="send-btn">SEND</button>
-               </form>
-
-            </section>
-            
-            <!-- ! SETTINGS SECTION -->
-            <section class="settings-section">
-               
-               <header class="settings-header">
-                  <h3 class="settings-title">SETTINS</h3>
-               </header>
-               <div class="switch-container">
-                  <p class="send-email-text">Send Email Notification</p>
-                  <!-- ! PLUS ADD SWITCH HERE -->
-                  <p class="set-profile-text">Set Profile to Public</p>
-               </div>
-               <select class="select-settings">
-                  <!-- ^ MORE TO COME -->
-               </select>
-
-            </section>
-         </div> <!--! --- END OF GRID WRAPPER -->
-
-         
-
+                  <select class="select-settings">
+                     <!-- ^ MORE TO COME -->
+                  </select>
+               </section>
+            </div>
          </main>
       </div>
-     
+
       <script
          src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
          integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg=="

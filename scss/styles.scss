@@ -434,7 +434,6 @@ main {
   -------------------------------------------------- */
 
 .grid-wrapper {
-   width: 100%;
    display: grid;
    grid-template-columns: 1fr;
    grid-template-rows: auto;
@@ -471,6 +470,11 @@ main {
 .member-img {
    width: 80%;
    border-radius: 50%;
+}
+
+.msgUser-section {
+   margin-top: 20px;
+   border: 2px solid red;
 }
 
 /* --------------------------------------------------
