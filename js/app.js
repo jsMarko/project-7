@@ -57,15 +57,21 @@ closeBtn.addEventListener("click", () => {
 const trafficBtns = document.querySelectorAll(".li-traffic");
 
 trafficBtns.forEach((btn) => {
-   btn.addEventListener("click", () => {
-      if (btn.textContent === "Hourly") {
-         hourly();
-      } else if (btn.textContent === "Daily") {
-         daily();
-      } else if (btn.textContent === "Weekly") {
-         weekly();
-      } else if (btn.textContent === "Monthly") {
-         monthly();
+   btn.addEventListener("click", (e) => {
+      const tgt = e.target;
+
+      if (tgt.classList.contains("li-traffic")) {
+         document.querySelector(".active").classList.remove("active");
+         tgt.classList.add("active");
+         if (btn.textContent === "Hourly") {
+            hourly();
+         } else if (btn.textContent === "Daily") {
+            daily();
+         } else if (btn.textContent === "Weekly") {
+            weekly();
+         } else if (btn.textContent === "Monthly") {
+            monthly();
+         }
       }
    });
 });

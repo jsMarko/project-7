@@ -307,6 +307,7 @@ main {
   border-radius: 25px;
 }
 
+.active,
 .li-traffic:hover {
   background-color: #43c27a;
   color: white;
@@ -402,10 +403,10 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  border: 2px solid red;
 }
 
 .members-container {
+  margin-bottom: 20px;
   border: 2px solid #eee;
 }
 
@@ -437,9 +438,47 @@ main {
   border-radius: 50%;
 }
 
+/* --------------------------------------------------
+             MESSAGE / SETTINGS SECTIONS
+  -------------------------------------------------- */
 .msgUser-section {
-  margin-top: 20px;
-  border: 2px solid red;
+  border: 2px solid #ddd;
+  padding-bottom: 15px;
+}
+
+.settings-title,
+.msgUser-title {
+  padding: 10px 0;
+  color: #6f6cb5;
+}
+
+.form-message-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.userField {
+  height: 40px;
+  font-size: 1.2rem;
+  padding-left: 8px;
+  margin-bottom: 15px;
+}
+
+.messageField {
+  height: 145px;
+  font-size: 1.2rem;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.send-btn {
+  padding: 10px;
+  background-color: #6060b1;
+  color: #fff;
+}
+
+.settings-section {
+  border: 2px solid #ddd;
 }
 
 /* --------------------------------------------------
