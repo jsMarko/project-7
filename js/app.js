@@ -250,10 +250,12 @@ inputField.addEventListener("keyup", () => {
    });
 
    results.forEach((result) => {
+      let searchResults = document.querySelector(".search-results");
       const div = document.createElement("div");
       div.innerHTML = result.name;
       div.className = "result-names";
       dropDownResults.appendChild(div);
+      searchResults.style.display = "block";
    });
 
    if (input === "") {
@@ -268,6 +270,7 @@ resultEvent.addEventListener("click", (e) => {
    inputField.value = item.textContent;
    console.log(inputField.value);
    dropDownResults.innerHTML = "";
+   searchResults.style.display = "none";
 });
 
 // setting eventListener for send
@@ -359,6 +362,6 @@ cancel.addEventListener("click", () => {
    }
 
    let timezone = document.querySelector(".timeZone");
-   timezone.value = "Atlantic Standard Time";
+   timezone.selectedIndex = 0;
    saveSettings();
 });
