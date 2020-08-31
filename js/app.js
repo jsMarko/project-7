@@ -360,4 +360,5 @@ cancel.addEventListener("click", () => {
 
    let timezone = document.querySelector(".timeZone");
    timezone.value = "Atlantic Standard Time";
+   saveSettings();
 });
