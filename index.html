@@ -255,7 +255,7 @@
                               </div>
                               <p class="activity-time-posted">commented on YourApp's SEO Tips</p>
                               <div class="members-date">
-                                 <p>></p>
+                                 <p class="arrow">></p>
                               </div>
                            </div>
                         </div>
@@ -269,10 +269,11 @@
                            <div class="members-text-container">
                               <div class="members-text">
                                  <p>Clark Kent</p>
-                                 <p class="activity-time-posted">liked the post Facebook's Changes for 2020</p>
-                              </div>
-                              <div class="members-date">
                                  <p>5 hours ago</p>
+                              </div>
+                              <p class="activity-time-posted">liked the post Facebook's Changes for 2020</p>
+                              <div class="members-date">
+                                 <p class="arrow">></p>
                               </div>
                            </div>
                         </div>
@@ -286,10 +287,11 @@
                            <div class="members-text-container">
                               <div class="members-text">
                                  <p>Susan Day</p>
-                                 <p class="activity-time-posted">commentedd on Facebook's Changes for 2020</p>
-                              </div>
-                              <div class="members-date">
                                  <p>5 hours ago</p>
+                              </div>
+                              <p class="activity-time-posted">commentedd on Facebook's Changes for 2020</p>
+                              <div class="members-date">
+                                 <p class="arrow">></p>
                               </div>
                            </div>
                         </div>
@@ -303,10 +305,11 @@
                            <div class="members-text-container">
                               <div class="members-text">
                                  <p>John Mathis</p>
-                                 <p class="activity-time-posted">posted YourApp's SEO Tips</p>
-                              </div>
-                              <div class="members-date">
                                  <p>1 day ago</p>
+                              </div>
+                              <p class="activity-time-posted">posted YourApp's SEO Tips</p>
+                              <div class="members-date">
+                                 <p class="arrow">></p>
                               </div>
                            </div>
                         </div>
@@ -321,8 +324,11 @@
                      <h3 class="msgUser-title">MESSAGE USER</h3>
                   </header>
                   <form class="form-message-container">
-                     <input type="text" placeholder="Search" class="userField" />
-                     <textarea class="messageField" placeholder="Message text for user"></textarea>
+                     <input type="text" placeholder="Search for Useer" id="userField" class="userField" autocomplete="off" />
+                     <div class="search-results"></div>
+
+                     <textarea class="messageField" placeholder="Message for user"></textarea>
+
                      <button class="send-btn" type="submit">SEND</button>
                   </form>
                </section>
@@ -332,14 +338,44 @@
                   <header class="settings-header">
                      <h3 class="settings-title">SETTINGS</h3>
                   </header>
-                  <div class="switch-container">
-                     <p class="send-email-text">Send Email Notification</p>
-                     <!-- ! PLUS ADD SWITCH HERE -->
-                     <p class="set-profile-text">Set Profile to Public</p>
+                  <div class="switch-container" id="switchBtn1-con">
+                     <p class="email-text">Send Email Notification</p>
+                     <div class="switch-btn" id="btn1">
+                        <div class="on-off">
+                           <p class="on">ON</p>
+                           <p class="off">OFF</p>
+                        </div>
+                        <div class="circle-btn"></div>
+                     </div>
                   </div>
-                  <select class="select-settings">
-                     <!-- ^ MORE TO COME -->
-                  </select>
+
+                  <div class="switch-container" id="switchBtn2-con">
+                     <p class="profile-text">Set Profile to Public</p>
+                     <div class="switch-btn" id="btn2">
+                        <div class="on-off">
+                           <p class="on">ON</p>
+                           <p class="off">OFF</p>
+                        </div>
+                        <div class="circle-btn"></div>
+                     </div>
+                  </div>
+                  <div class="timeZone-container">
+                     <select class="timeZone">
+                        <option>Atlantic Standard time</option>
+                        <option>Eastern Standard Time</option>
+                        <option>Central Standard Time</option>
+                        <option>Mountain Standard Time</option>
+                        <option>Pacific Standard Time</option>
+                        <option>Alaskan Standard Time</option>
+                        <option>Hawaii-Aleutian Standard Time</option>
+                        <option>Samoa Standard Time</option>
+                        <option>Chamorro Standard Time</option>
+                     </select>
+                  </div>
+                  <div class="save-cancel-container">
+                     <button class="save">SAVE</button>
+                     <button class="cancel">Cancel</button>
+                  </div>
                </section>
             </div>
          </main>

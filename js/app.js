@@ -234,3 +234,38 @@ let mobileDoughnut = new Chart("mobile-users", {
       }
    }
 });
+
+// ! AutoComplete
+
+const names = [{ name: "Cindy Martin" }, { name: "Clark Kent" }, { name: "Susan Day" }, { name: "John Mathis" }];
+
+const inputField = document.querySelector(".userField");
+const dropDownResults = document.querySelector(".search-results");
+
+inputField.addEventListener("keyup", () => {
+   const input = inputField.value.toLowerCase();
+   dropDownResults.innerHTML = "";
+   const results = names.filter((name) => {
+      return name.name.toLowerCase().startsWith(input);
+   });
+
+   results.forEach((result) => {
+      const div = document.createElement("div");
+      div.innerHTML = result.name;
+      div.className = "result-names";
+      dropDownResults.appendChild(div);
+   });
+
+   if (input === "") {
+      dropDownResults.innerHTML = "";
+   }
+});
+
+const resultEvent = document.querySelector(".search-results");
+
+resultEvent.addEventListener("click", (e) => {
+   const item = e.target;
+   inputField.value = item.textContent;
+   console.log(inputField.value);
+   dropDownResults.innerHTML = "";
+});
