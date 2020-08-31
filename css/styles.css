@@ -574,6 +574,12 @@ main {
   color: #fff;
 }
 
+.cancel:hover,
+.save:hover {
+  background-color: #8d8ddf;
+  cursor: pointer;
+}
+
 .timeZone-container {
   display: flex;
   justify-content: center;

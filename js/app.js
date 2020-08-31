@@ -269,3 +269,95 @@ resultEvent.addEventListener("click", (e) => {
    console.log(inputField.value);
    dropDownResults.innerHTML = "";
 });
+
+// setting eventListener for send
+
+const user = document.querySelector(".userField");
+const message = document.querySelector(".messageField");
+const send = document.querySelector(".send-btn");
+
+send.addEventListener("click", (e) => {
+   e.preventDefault();
+   // make sure user and message fields are filled out
+   if (user.value === "" && message.value === "") {
+      alert("Please fill out user and message fields before sending");
+   } else if (user.value === "") {
+      alert("Please fill out user field before sending");
+   } else if (message.value === "") {
+      alert("Please fill out message field before sending");
+   } else {
+      alert(`Message successfully sent to: ${user.value}`);
+      user.value = "";
+      message.value = "";
+   }
+});
+
+const switchOne = document.querySelector("#btn1");
+const switchTwo = document.querySelector("#btn2");
+const switchBtns = document.querySelectorAll(".switch-btn");
+const displayed = document.querySelector(".display-storage");
+const save = document.querySelector(".save");
+const cancel = document.querySelector(".cancel");
+
+switchBtns.forEach((btn) => {
+   btn.addEventListener("click", () => {
+      if (btn.classList.contains("active")) {
+         btn.classList.remove("active");
+      } else if (!btn.classList.contains("active")) {
+         btn.classList.add("active");
+      }
+   });
+});
+
+function saveSettings() {
+   let activeStrB1 = switchOne.classList.contains("active").toString();
+   let activeStrB2 = switchTwo.classList.contains("active").toString();
+   let timezone = document.querySelector(".timeZone").value;
+
+   const settingsObj = {
+      switch1: activeStrB1,
+      switch2: activeStrB2,
+      timeZone: timezone
+   };
+   localStorage.setItem("Settings", JSON.stringify(settingsObj));
+}
+
+save.addEventListener("click", () => {
+   saveSettings();
+});
+
+const settings = JSON.parse(localStorage.getItem("Settings"));
+
+if (settings === null) {
+   // Do nothing
+} else {
+   console.log(settings.switch1 + " " + settings.switch2 + " " + settings.timeZone);
+   if (settings.switch1 === "true") {
+      switchOne.classList.add("active");
+   } else {
+      switchOne.classList.remove("active");
+   }
+
+   if (settings.switch2 === "true") {
+      switchTwo.classList.add("active");
+   } else {
+      switchTwo.classList.remove("active");
+   }
+
+   // console.log(timezone.value);
+   let timezone = document.querySelector(".timeZone");
+   timezone.value = settings.timeZone;
+   console.log(settings.timeZone);
+}
+
+cancel.addEventListener("click", () => {
+   if (switchOne.classList.contains("active")) {
+      switchOne.classList.remove("active");
+   }
+   if (switchTwo.classList.contains("active")) {
+      switchTwo.classList.remove("active");
+   }
+
+   let timezone = document.querySelector(".timeZone");
+   timezone.value = "Atlantic Standard Time";
+});
